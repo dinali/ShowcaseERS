@@ -42,6 +42,7 @@
 		96A3B5E216CACB1B001B9BC1 /* EffectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5E116CACB1B001B9BC1 /* EffectsViewController.m */; };
 		96A3B5E816CACBD6001B9BC1 /* CustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5E716CACBD6001B9BC1 /* CustomHeaderView.m */; };
 		96A3B5F116CADDAD001B9BC1 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5F016CADDAD001B9BC1 /* MyCollectionViewCell.m */; };
+		96A3B5F416CAEEC6001B9BC1 /* MyMitigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		96A3B5E716CACBD6001B9BC1 /* CustomHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderView.m; sourceTree = "<group>"; };
 		96A3B5EF16CADDAD001B9BC1 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		96A3B5F016CADDAD001B9BC1 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		96A3B5F216CAEEC6001B9BC1 /* MyMitigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMitigationViewController.h; sourceTree = "<group>"; };
+		96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMitigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +233,8 @@
 				96A3B5BE16CAC7EF001B9BC1 /* OverviewViewController.m */,
 				96A3B5E016CACB1A001B9BC1 /* EffectsViewController.h */,
 				96A3B5E116CACB1B001B9BC1 /* EffectsViewController.m */,
+				96A3B5F216CAEEC6001B9BC1 /* MyMitigationViewController.h */,
+				96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				96A3B5E216CACB1B001B9BC1 /* EffectsViewController.m in Sources */,
 				96A3B5E816CACBD6001B9BC1 /* CustomHeaderView.m in Sources */,
 				96A3B5F116CADDAD001B9BC1 /* MyCollectionViewCell.m in Sources */,
+				96A3B5F416CAEEC6001B9BC1 /* MyMitigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +562,7 @@
 				96A3B5B816CAC799001B9BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96A3B5B916CAC799001B9BC1 /* Build configuration list for PBXNativeTarget "ShowcaseERSTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +571,7 @@
 				96A3B5BB16CAC799001B9BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
