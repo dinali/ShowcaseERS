@@ -1,23 +1,240 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="l00-1B-UG5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Overview View Controller-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" customClass="ERSViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="OverviewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="naturalresources.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NrC-LA-Wnn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="aaG-Hn-9Qs"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHk-X3-N9G">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="768" id="3SP-C8-gHl"/>
+                                </constraints>
+                                <string key="text">The Earth's temperature is rising as a result of increased atmospheric concentrations of greenhouse gases. Agriculture is a source of methane and nitrous oxide emissions, two prominent greenhouse gases. Changes in agricultural practices can reduce emissions of these gases, and reduce atmospheric concentration of carbon dioxide by sequestering carbon in soil.
+
+Climate change will affect crop and livestock yields worldwide, which will lead to changes in food and fiber consumption, prices of agricultural commodities, and farm incomes.
+
+ERS is uniquely positioned to analyze these changes through its expertise on the economics of:
+
+Land use and management,
+Technology adoption, and
+Environmental program </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NrC-LA-Wnn" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="EYG-29-xDC"/>
+                            <constraint firstItem="yHk-X3-N9G" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="OAL-Yb-RnA"/>
+                            <constraint firstItem="yHk-X3-N9G" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="aHa-U1-I7V"/>
+                            <constraint firstItem="yHk-X3-N9G" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="ceW-vt-Oif"/>
+                            <constraint firstItem="NrC-LA-Wnn" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="tZB-m3-zqx"/>
+                            <constraint firstItem="NrC-LA-Wnn" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="utx-Yg-oxp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cqI-dU-rAk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="44" y="-175"/>
+        </scene>
+        <!--Effects View Controller - USDA-ERS Effects-->
+        <scene sceneID="FwY-Zn-Dcb">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="R0s-2f-7DF" customClass="EffectsViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="I0M-MW-zJp">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7CP-op-VdT">
+                            <size key="itemSize" width="465" height="336"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCell" id="YSk-yL-PJf" customClass="MyCollectionViewCell">
+                                <rect key="frame" x="151" y="50" width="465" height="336"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="465" height="336"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="465" translatesAutoresizingMaskIntoConstraints="NO" id="ezG-NM-kjr">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="UeK-5c-VoF"/>
+                                                <constraint firstAttribute="width" constant="465" id="yvY-BL-Yva"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJS-V2-0Kv">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="298" id="9sS-hb-Aqe"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="BJS-V2-0Kv" firstAttribute="trailing" secondItem="ezG-NM-kjr" secondAttribute="trailing" type="default" id="9WT-oD-kEa"/>
+                                    <constraint firstItem="ezG-NM-kjr" firstAttribute="top" secondItem="YSk-yL-PJf" secondAttribute="top" constant="5" id="9vC-uD-cPI"/>
+                                    <constraint firstItem="ezG-NM-kjr" firstAttribute="leading" secondItem="YSk-yL-PJf" secondAttribute="leading" type="default" id="Fc4-bY-LAV"/>
+                                    <constraint firstItem="BJS-V2-0Kv" firstAttribute="leading" secondItem="YSk-yL-PJf" secondAttribute="leading" type="default" id="bjS-ZR-a3u"/>
+                                    <constraint firstItem="BJS-V2-0Kv" firstAttribute="top" secondItem="YSk-yL-PJf" secondAttribute="top" constant="38" id="h0u-nf-22V"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="ezG-NM-kjr" id="qSc-Dg-wo8"/>
+                                    <outlet property="imageView" destination="BJS-V2-0Kv" id="Nj5-1l-C6f"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyHeader" id="jtr-8t-bbO" customClass="CustomHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPN-1l-PjM">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="cPN-1l-PjM" firstAttribute="top" secondItem="jtr-8t-bbO" secondAttribute="top" type="default" id="cWs-bz-bBR"/>
+                                <constraint firstItem="cPN-1l-PjM" firstAttribute="leading" secondItem="jtr-8t-bbO" secondAttribute="leading" type="default" id="cj2-iy-xui"/>
+                                <constraint firstItem="cPN-1l-PjM" firstAttribute="trailing" secondItem="jtr-8t-bbO" secondAttribute="trailing" type="default" id="oiL-Lb-Kz2"/>
+                                <constraint firstItem="cPN-1l-PjM" firstAttribute="bottom" secondItem="jtr-8t-bbO" secondAttribute="bottom" type="default" id="yAC-8p-bEm"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="sectionLabel" destination="cPN-1l-PjM" id="8SS-N9-WYJ"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="R0s-2f-7DF" id="u40-qL-PtU"/>
+                            <outlet property="delegate" destination="R0s-2f-7DF" id="eVp-Sk-UUr"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="USDA-ERS Effects" id="Dri-Qw-acJ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8D-UV-FPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="-123"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="ab4-Wr-Wv9">
+            <objects>
+                <navigationController id="OdD-5W-u4v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="JQg-x9-DGR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1yb-cc-pdG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="1Wn-CH-Mhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qig-gl-nWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="-1319"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jTe-SB-T1u">
+            <objects>
+                <tabBarController id="l00-1B-UG5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="the-ZB-Tic">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OdD-5W-u4v" kind="relationship" relationship="viewControllers" id="6bV-hT-mbn"/>
+                        <segue destination="qTG-Rc-8ZZ" kind="relationship" relationship="viewControllers" id="vGI-tI-GLa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6o-pN-daY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="-2385"/>
+        </scene>
+        <!--Navigation Controller - Effects-->
+        <scene sceneID="wBK-ws-G0H">
+            <objects>
+                <navigationController id="qTG-Rc-8ZZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Effects" id="GqZ-y6-opu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YSt-EJ-JN7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R0s-2f-7DF" kind="relationship" relationship="rootViewController" id="fum-au-qht"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcw-dW-nMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="-1240"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="naturalresources.jpg" width="727" height="101"/>
+    </resources>
+    <classes>
+        <class className="CustomHeaderView" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHeaderView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="sectionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EffectsViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EffectsViewController.h"/>
+        </class>
+        <class className="MyCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OverviewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OverviewViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
