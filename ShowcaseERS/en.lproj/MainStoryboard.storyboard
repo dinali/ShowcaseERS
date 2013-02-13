@@ -135,6 +135,283 @@ Environmental program </string>
             </objects>
             <point key="canvasLocation" x="1026" y="-123"/>
         </scene>
+        <!--My Mitigation View Controller - Mitigation-->
+        <scene sceneID="q0u-Aj-ckg">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" title="Mitigation" id="8c5-Eb-VuN" customClass="MyMitigationViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="OPd-Ae-DfJ">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LBt-6O-2dH">
+                            <size key="itemSize" width="197" height="186"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCell" id="3Jt-ZS-b7e" customClass="MyCollectionViewCell">
+                                <rect key="frame" x="0.0" y="50" width="197" height="186"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="197" height="186"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="191" translatesAutoresizingMaskIntoConstraints="NO" id="jq5-uS-TRb">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="fdQ-nI-H8B"/>
+                                                <constraint firstAttribute="width" constant="191" id="uCd-NK-RvO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8g6-0K-vQ5">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="140" id="TEx-VT-o6N"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8g6-0K-vQ5" firstAttribute="bottom" secondItem="3Jt-ZS-b7e" secondAttribute="bottom" type="default" id="Iit-9x-hFL"/>
+                                    <constraint firstItem="8g6-0K-vQ5" firstAttribute="leading" secondItem="jq5-uS-TRb" secondAttribute="leading" type="default" id="KTJ-EI-p8W"/>
+                                    <constraint firstItem="jq5-uS-TRb" firstAttribute="trailing" secondItem="3Jt-ZS-b7e" secondAttribute="trailing" type="default" id="QUM-kP-lCT"/>
+                                    <constraint firstItem="jq5-uS-TRb" firstAttribute="top" secondItem="3Jt-ZS-b7e" secondAttribute="top" constant="5" id="jt1-fI-dUK"/>
+                                    <constraint firstItem="8g6-0K-vQ5" firstAttribute="trailing" secondItem="3Jt-ZS-b7e" secondAttribute="trailing" type="default" id="wQQ-kB-56H"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="jq5-uS-TRb" id="oY0-qA-7j0"/>
+                                    <outlet property="imageView" destination="8g6-0K-vQ5" id="5Y3-Dx-zi8"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyHeader" id="9Ny-2L-IC9" customClass="CustomHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="  How can land managers remove carbon dioxide from the environment? " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="768" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-Co-eOK">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kEa-Co-eOK" firstAttribute="trailing" secondItem="9Ny-2L-IC9" secondAttribute="trailing" type="default" id="CHP-lr-Qt9"/>
+                                <constraint firstItem="kEa-Co-eOK" firstAttribute="top" secondItem="9Ny-2L-IC9" secondAttribute="top" type="default" id="CLY-5x-Zb5"/>
+                                <constraint firstItem="kEa-Co-eOK" firstAttribute="bottom" secondItem="9Ny-2L-IC9" secondAttribute="bottom" type="default" id="EgR-bS-Mqd"/>
+                                <constraint firstItem="kEa-Co-eOK" firstAttribute="leading" secondItem="9Ny-2L-IC9" secondAttribute="leading" type="default" id="O1d-dT-2ee"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="sectionLabel" destination="kEa-Co-eOK" id="Wni-I5-beB"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="8c5-Eb-VuN" id="qv0-U8-3DT"/>
+                            <outlet property="delegate" destination="8c5-Eb-VuN" id="f9J-5B-y1o"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="USDA-ERS Mitigation" id="cGB-4b-Nxh"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvz-IT-zLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-104"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="5fq-Bm-iMU">
+            <objects>
+                <viewController id="R2r-ou-frd" customClass="AudioViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qJs-12-RU9">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="W11-Ng-7F8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="9j3-9O-t6a"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume" destination="R2r-ou-frd" eventType="valueChanged" id="Yfr-Tu-kKy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="demonstrates playing a recording: FoodDesertPodcast.mp3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-G9-j8R">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="7ez-s8-m3G"/>
+                                    <constraint firstAttribute="width" constant="587" id="GZD-MF-U4m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IC4-2f-JUd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="4GT-ee-ygJ"/>
+                                    <constraint firstAttribute="height" constant="116" id="uRq-ZZ-89q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="R2r-ou-frd" eventType="touchUpInside" id="knW-3h-md9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yah-c3-TMV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="4j8-Qe-p3D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio" destination="R2r-ou-frd" eventType="touchUpInside" id="hY6-x6-FEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yah-c3-TMV" firstAttribute="trailing" secondItem="IC4-2f-JUd" secondAttribute="trailing" type="default" id="1L7-l8-0wO"/>
+                            <constraint firstItem="IC4-2f-JUd" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="146" id="3K9-EF-gkf"/>
+                            <constraint firstItem="yah-c3-TMV" firstAttribute="baseline" secondItem="IC4-2f-JUd" secondAttribute="baseline" type="default" id="7Qh-zv-6cz"/>
+                            <constraint firstItem="IC4-2f-JUd" firstAttribute="leading" secondItem="qJs-12-RU9" secondAttribute="leading" constant="334" id="FJQ-J5-QFT"/>
+                            <constraint firstItem="W11-Ng-7F8" firstAttribute="leading" secondItem="yah-c3-TMV" secondAttribute="leading" type="default" id="P8v-YB-XJN"/>
+                            <constraint firstItem="yah-c3-TMV" firstAttribute="leading" secondItem="IC4-2f-JUd" secondAttribute="leading" type="default" id="Wh5-Rw-us4"/>
+                            <constraint firstAttribute="bottom" secondItem="W11-Ng-7F8" secondAttribute="bottom" constant="402" id="YJH-PH-UJk"/>
+                            <constraint firstItem="HCt-G9-j8R" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="59" id="bVP-xM-KSE"/>
+                            <constraint firstAttribute="trailing" secondItem="HCt-G9-j8R" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cxS-3M-rqZ"/>
+                            <constraint firstItem="yah-c3-TMV" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="304" id="k6F-3g-EAC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vKY-v3-Qqg"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="HCt-G9-j8R" id="2G5-dG-gRl"/>
+                        <outlet property="playButton" destination="IC4-2f-JUd" id="ai3-Vi-3iH"/>
+                        <outlet property="stopButton" destination="yah-c3-TMV" id="2Ta-97-Hfu"/>
+                        <outlet property="volumeControl" destination="W11-Ng-7F8" id="MyN-ii-pzJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F6-TV-gx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826" y="-104"/>
+        </scene>
+        <!--Recent Pubs View Controller - Recent Publications-->
+        <scene sceneID="Rdo-54-SOY">
+            <objects>
+                <tableViewController title="Recent Publications" id="jiO-p9-Wsq" customClass="RecentPubsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="09p-F1-wqg">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="g6a-p4-KbO" detailTextLabel="fSB-eo-5Cy" style="IBUITableViewCellStyleSubtitle" id="JJd-XA-1jD">
+                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6a-p4-KbO">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-eo-5Cy">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jiO-p9-Wsq" id="rqv-b3-HkW"/>
+                            <outlet property="delegate" destination="jiO-p9-Wsq" id="rSy-x0-wZd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="USDA-ERS Publications" id="KLS-e4-Bdi"/>
+                    <connections>
+                        <outlet property="myTableView" destination="09p-F1-wqg" id="doQ-gf-cqK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pue-Dq-ZZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3780" y="-112"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="iPH-Lh-ZRa">
+            <objects>
+                <viewController id="Www-tc-Idx" customClass="MovieViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OV3-jM-8sV">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="USDA Economist Says Higher Food Prices in 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQQ-Tw-2nx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ak2-fq-tjb"/>
+                                    <constraint firstAttribute="width" constant="526" id="dYI-Ba-AoJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ers_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-qk-vB6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="8zj-Gv-tQG"/>
+                                    <constraint firstAttribute="height" constant="108" id="aE9-i5-IZd"/>
+                                </constraints>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNx-yB-t88">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="624" id="NQh-xb-MBX"/>
+                                    <constraint firstAttribute="width" constant="753" id="R5i-HK-j32"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="  in this exciting video, USDA ERS economist Ricky Volpe explains why food prices will be higer this year." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="753" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-OL-sBb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="753" id="0y1-Mk-LKD"/>
+                                    <constraint firstAttribute="height" constant="53" id="xsd-Ag-Zpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AQQ-Tw-2nx" firstAttribute="top" secondItem="OV3-jM-8sV" secondAttribute="top" constant="43" id="7PS-v7-jaS"/>
+                            <constraint firstItem="ZTf-OL-sBb" firstAttribute="leading" secondItem="OV3-jM-8sV" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Fu9-hG-2C2"/>
+                            <constraint firstItem="AQQ-Tw-2nx" firstAttribute="leading" secondItem="MFn-qk-vB6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IBq-He-96b"/>
+                            <constraint firstItem="ZTf-OL-sBb" firstAttribute="top" secondItem="OV3-jM-8sV" secondAttribute="top" constant="759" id="PZb-Jd-t0y"/>
+                            <constraint firstItem="MFn-qk-vB6" firstAttribute="leading" secondItem="OV3-jM-8sV" secondAttribute="leading" type="default" id="QRU-pb-sja"/>
+                            <constraint firstItem="MFn-qk-vB6" firstAttribute="top" secondItem="OV3-jM-8sV" secondAttribute="top" type="default" id="Y3M-fV-cJU"/>
+                            <constraint firstItem="aNx-yB-t88" firstAttribute="top" secondItem="MFn-qk-vB6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hVD-0y-zFz"/>
+                            <constraint firstItem="aNx-yB-t88" firstAttribute="centerX" secondItem="OV3-jM-8sV" secondAttribute="centerX" type="default" id="nfb-0f-T7z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nEn-Ds-TSI"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="AQQ-Tw-2nx" id="Tw0-2g-YMj"/>
+                        <outlet property="logoView" destination="MFn-qk-vB6" id="pxI-BO-ojA"/>
+                        <outlet property="youTubeView" destination="aNx-yB-t88" id="8H6-3d-SFR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jgj-1o-ALF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4658" y="-88"/>
+        </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="ab4-Wr-Wv9">
             <objects>
@@ -167,6 +444,10 @@ Environmental program </string>
                     <connections>
                         <segue destination="OdD-5W-u4v" kind="relationship" relationship="viewControllers" id="6bV-hT-mbn"/>
                         <segue destination="qTG-Rc-8ZZ" kind="relationship" relationship="viewControllers" id="vGI-tI-GLa"/>
+                        <segue destination="u0b-zv-BtD" kind="relationship" relationship="viewControllers" id="OcP-sC-C7J"/>
+                        <segue destination="OhN-yv-KTz" kind="relationship" relationship="viewControllers" id="neD-Uz-TDx"/>
+                        <segue destination="l7y-Qk-cxy" kind="relationship" relationship="viewControllers" id="vA2-UW-3xC"/>
+                        <segue destination="pXe-9c-y9H" kind="relationship" relationship="viewControllers" id="HtI-xz-jTE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6o-pN-daY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,11 +473,102 @@ Environmental program </string>
             </objects>
             <point key="canvasLocation" x="1031" y="-1240"/>
         </scene>
+        <!--Navigation Controller - Mitigation-->
+        <scene sceneID="L8d-1m-w3l">
+            <objects>
+                <navigationController id="u0b-zv-BtD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mitigation" id="O9R-DF-P3J"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bx9-uP-oqY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8c5-Eb-VuN" kind="relationship" relationship="rootViewController" id="jno-dX-HEz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bo6-Af-rNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-1248"/>
+        </scene>
+        <!--Navigation Controller - Audio-->
+        <scene sceneID="wat-lN-X69">
+            <objects>
+                <navigationController title="Audio" id="OhN-yv-KTz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="headphones.png" id="k2l-fR-NDx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XZg-hf-skb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R2r-ou-frd" kind="relationship" relationship="rootViewController" id="5X1-zS-HfK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WO-om-B0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826" y="-1240"/>
+        </scene>
+        <!--Navigation Controller - Rcent-->
+        <scene sceneID="Fn6-0z-b5T">
+            <objects>
+                <navigationController title="Rcent" id="l7y-Qk-cxy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="KVZ-iW-gei"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QXi-fn-OhC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jiO-p9-Wsq" kind="relationship" relationship="rootViewController" id="djD-Nf-Rwa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bs-9K-6le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3798" y="-1240"/>
+        </scene>
+        <!--Navigation Controller - Videos-->
+        <scene sceneID="ygz-9T-do8">
+            <objects>
+                <navigationController title="Videos" id="pXe-9c-y9H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Videos" image="movie.png" id="jWF-sa-ET3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7VP-F5-6SD">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Www-tc-Idx" kind="relationship" relationship="rootViewController" id="cKe-sZ-vEV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJL-1B-pI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4658" y="-1240"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ers_icon.png" width="46" height="57"/>
+        <image name="headphones.png" width="22" height="21"/>
+        <image name="movie.png" width="19" height="25"/>
         <image name="naturalresources.jpg" width="727" height="101"/>
     </resources>
     <classes>
+        <class className="AudioViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="adjustVolume"/>
+                <relationship kind="action" name="playAudio:"/>
+                <relationship kind="action" name="stopAudio"/>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="volumeControl" candidateClass="UISlider"/>
+            </relationships>
+        </class>
         <class className="CustomHeaderView" superclassName="UICollectionReusableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHeaderView.h"/>
             <relationships>
@@ -206,6 +578,14 @@ Environmental program </string>
         <class className="EffectsViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EffectsViewController.h"/>
         </class>
+        <class className="MovieViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MovieViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="logoView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="youTubeView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="MyCollectionViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCollectionViewCell.h"/>
             <relationships>
@@ -213,11 +593,20 @@ Environmental program </string>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
+        <class className="MyMitigationViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyMitigationViewController.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="OverviewViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OverviewViewController.h"/>
+        </class>
+        <class className="RecentPubsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecentPubsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
@@ -230,6 +619,9 @@ Environmental program </string>
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

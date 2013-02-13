@@ -11,6 +11,6 @@
 @interface CustomHeaderView : UICollectionReusableView
 @property (strong, nonatomic) IBOutlet UILabel *sectionLabel;
 
-//@property (weak, nonatomic) IBOutlet UILabel *sectionTitleLabel;
+
 
 @end
