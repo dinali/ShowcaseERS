@@ -219,6 +219,82 @@ Environmental program </string>
             </objects>
             <point key="canvasLocation" x="1967" y="-104"/>
         </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="5fq-Bm-iMU">
+            <objects>
+                <viewController id="R2r-ou-frd" customClass="AudioViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qJs-12-RU9">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="W11-Ng-7F8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="9j3-9O-t6a"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume" destination="R2r-ou-frd" eventType="valueChanged" id="Yfr-Tu-kKy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FoodDesertPodcast.mp3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-G9-j8R">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="7ez-s8-m3G"/>
+                                    <constraint firstAttribute="width" constant="587" id="GZD-MF-U4m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IC4-2f-JUd">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="R2r-ou-frd" eventType="touchUpInside" id="knW-3h-md9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yah-c3-TMV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio" destination="R2r-ou-frd" eventType="touchUpInside" id="hY6-x6-FEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IC4-2f-JUd" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="141" id="1sF-IH-V49"/>
+                            <constraint firstItem="yah-c3-TMV" firstAttribute="baseline" secondItem="IC4-2f-JUd" secondAttribute="baseline" type="default" id="7Qh-zv-6cz"/>
+                            <constraint firstItem="HCt-G9-j8R" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="83" id="HHG-oa-Iee"/>
+                            <constraint firstItem="W11-Ng-7F8" firstAttribute="top" secondItem="qJs-12-RU9" secondAttribute="top" constant="36" id="I8c-xk-Xf9"/>
+                            <constraint firstItem="IC4-2f-JUd" firstAttribute="leading" secondItem="qJs-12-RU9" secondAttribute="leading" constant="224" id="NHU-ty-uFS"/>
+                            <constraint firstItem="W11-Ng-7F8" firstAttribute="centerX" secondItem="HCt-G9-j8R" secondAttribute="centerX" type="default" id="Vqx-kO-ffB"/>
+                            <constraint firstAttribute="trailing" secondItem="yah-c3-TMV" secondAttribute="trailing" constant="216" id="amQ-X6-YDa"/>
+                            <constraint firstItem="HCt-G9-j8R" firstAttribute="leading" secondItem="qJs-12-RU9" secondAttribute="leading" constant="138" id="jOK-2D-H8F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vKY-v3-Qqg"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="HCt-G9-j8R" id="2G5-dG-gRl"/>
+                        <outlet property="playButton" destination="IC4-2f-JUd" id="ai3-Vi-3iH"/>
+                        <outlet property="stopButton" destination="yah-c3-TMV" id="2Ta-97-Hfu"/>
+                        <outlet property="volumeControl" destination="W11-Ng-7F8" id="MyN-ii-pzJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F6-TV-gx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832" y="-104"/>
+        </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="ab4-Wr-Wv9">
             <objects>
@@ -252,6 +328,7 @@ Environmental program </string>
                         <segue destination="OdD-5W-u4v" kind="relationship" relationship="viewControllers" id="6bV-hT-mbn"/>
                         <segue destination="qTG-Rc-8ZZ" kind="relationship" relationship="viewControllers" id="vGI-tI-GLa"/>
                         <segue destination="u0b-zv-BtD" kind="relationship" relationship="viewControllers" id="OcP-sC-C7J"/>
+                        <segue destination="OhN-yv-KTz" kind="relationship" relationship="viewControllers" id="neD-Uz-TDx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6o-pN-daY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,11 +373,43 @@ Environmental program </string>
             </objects>
             <point key="canvasLocation" x="1967" y="-1248"/>
         </scene>
+        <!--Navigation Controller - Audio-->
+        <scene sceneID="wat-lN-X69">
+            <objects>
+                <navigationController title="Audio" id="OhN-yv-KTz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="headphones.png" id="k2l-fR-NDx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XZg-hf-skb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R2r-ou-frd" kind="relationship" relationship="rootViewController" id="5X1-zS-HfK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WO-om-B0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826" y="-1240"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="headphones.png" width="22" height="21"/>
         <image name="naturalresources.jpg" width="727" height="101"/>
     </resources>
     <classes>
+        <class className="AudioViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="adjustVolume"/>
+                <relationship kind="action" name="playAudio:"/>
+                <relationship kind="action" name="stopAudio"/>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="volumeControl" candidateClass="UISlider"/>
+            </relationships>
+        </class>
         <class className="CustomHeaderView" superclassName="UICollectionReusableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomHeaderView.h"/>
             <relationships>

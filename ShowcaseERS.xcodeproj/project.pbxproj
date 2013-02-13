@@ -43,6 +43,9 @@
 		96A3B5E816CACBD6001B9BC1 /* CustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5E716CACBD6001B9BC1 /* CustomHeaderView.m */; };
 		96A3B5F116CADDAD001B9BC1 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5F016CADDAD001B9BC1 /* MyCollectionViewCell.m */; };
 		96A3B5F416CAEEC6001B9BC1 /* MyMitigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */; };
+		96A3B5F716CB1FD6001B9BC1 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3B5F616CB1FD6001B9BC1 /* AudioViewController.m */; };
+		96A3B5F916CB25A5001B9BC1 /* fooddesertPodcast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96A3B5F816CB25A5001B9BC1 /* fooddesertPodcast.mp3 */; };
+		96A3B5FB16CB25F0001B9BC1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A3B5FA16CB25F0001B9BC1 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,10 @@
 		96A3B5F016CADDAD001B9BC1 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		96A3B5F216CAEEC6001B9BC1 /* MyMitigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMitigationViewController.h; sourceTree = "<group>"; };
 		96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMitigationViewController.m; sourceTree = "<group>"; };
+		96A3B5F516CB1FD6001B9BC1 /* AudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		96A3B5F616CB1FD6001B9BC1 /* AudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		96A3B5F816CB25A5001B9BC1 /* fooddesertPodcast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fooddesertPodcast.mp3; sourceTree = "<group>"; };
+		96A3B5FA16CB25F0001B9BC1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A3B5FB16CB25F0001B9BC1 /* AVFoundation.framework in Frameworks */,
 				96A3B58216CAC798001B9BC1 /* UIKit.framework in Frameworks */,
 				96A3B58416CAC798001B9BC1 /* Foundation.framework in Frameworks */,
 				96A3B58616CAC798001B9BC1 /* CoreGraphics.framework in Frameworks */,
@@ -132,6 +140,7 @@
 		96A3B57516CAC798001B9BC1 = {
 			isa = PBXGroup;
 			children = (
+				96A3B5FA16CB25F0001B9BC1 /* AVFoundation.framework */,
 				96A3B58716CAC799001B9BC1 /* ShowcaseERS */,
 				96A3B5AB16CAC799001B9BC1 /* ShowcaseERSTests */,
 				96A3B58016CAC798001B9BC1 /* Frameworks */,
@@ -179,6 +188,7 @@
 				96A3B5C116CAC90A001B9BC1 /* images */,
 				96A3B5C216CAC95D001B9BC1 /* Background1.tiff */,
 				96A3B5C616CAC975001B9BC1 /* Background3.tiff */,
+				96A3B5F816CB25A5001B9BC1 /* fooddesertPodcast.mp3 */,
 				96A3B5C716CAC975001B9BC1 /* co2mitigation.gif */,
 				96A3B5C816CAC975001B9BC1 /* crpmap.gif */,
 				96A3B5C916CAC975001B9BC1 /* ers_icon.png */,
@@ -235,6 +245,8 @@
 				96A3B5E116CACB1B001B9BC1 /* EffectsViewController.m */,
 				96A3B5F216CAEEC6001B9BC1 /* MyMitigationViewController.h */,
 				96A3B5F316CAEEC6001B9BC1 /* MyMitigationViewController.m */,
+				96A3B5F516CB1FD6001B9BC1 /* AudioViewController.h */,
+				96A3B5F616CB1FD6001B9BC1 /* AudioViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 				96A3B5DD16CAC975001B9BC1 /* images-2.jpeg in Resources */,
 				96A3B5DE16CAC975001B9BC1 /* images-3.jpeg in Resources */,
 				96A3B5DF16CAC975001B9BC1 /* images-4.jpeg in Resources */,
+				96A3B5F916CB25A5001B9BC1 /* fooddesertPodcast.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +393,7 @@
 				96A3B5E816CACBD6001B9BC1 /* CustomHeaderView.m in Sources */,
 				96A3B5F116CADDAD001B9BC1 /* MyCollectionViewCell.m in Sources */,
 				96A3B5F416CAEEC6001B9BC1 /* MyMitigationViewController.m in Sources */,
+				96A3B5F716CB1FD6001B9BC1 /* AudioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
