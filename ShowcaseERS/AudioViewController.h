@@ -17,8 +17,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-@interface AudioViewController : UIViewController
-<AVAudioPlayerDelegate>
+@interface AudioViewController : UIViewController <AVAudioPlayerDelegate>
 {
     AVAudioPlayer *audioPlayer;
     UISlider *volumeControl;

@@ -14,6 +14,9 @@
 
 @implementation EffectsViewController
 
+@synthesize myDescriptions = _myDescriptions;
+@synthesize myImages = _myImages;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

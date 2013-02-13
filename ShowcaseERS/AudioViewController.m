@@ -16,6 +16,7 @@
 @synthesize descriptionLabel = _descriptionLabel;
 @synthesize audioPlayer = _audioPlayer;
 
+
 -(IBAction)playAudio:(id)sender
 {
     NSURL *url = [[NSURL alloc] init];
@@ -29,6 +30,8 @@
     _audioPlayer = [[AVAudioPlayer alloc]
                     initWithContentsOfURL:url
                     error:&error];
+    _audioPlayer.numberOfLoops = 1;
+    
     if (error)
     {
         NSLog(@"Error in _audioPlayer: %@",
@@ -45,6 +48,7 @@
             _audioPlayer = nil;
         }
     }
+    [_audioPlayer prepareToPlay];
     [_audioPlayer play];
 }
 
@@ -60,45 +64,16 @@
     }
 }
 
--(IBAction) BtnGoLocalClick:(id)sender {
-    
-    // - - - Pull media from documents direction
-    
-    //NSString* saveFileName = @"MyAudio.mp3";
-    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSString *documentsDirectory = [paths objectAtIndex:0];
-    //NSString *path = [documentsDirectory stringByAppendingPathComponent:saveFileName];
-    // [self setupAV_audioPlayerForURL:url];
-}
-
--(void) setupAV_audioPlayerForURL: (NSURL*) url {
-    AVAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
-    AVPlayerItem *anItem = [AVPlayerItem playerItemWithAsset:asset];
-    
-    _audioPlayer = [AVPlayer playerWithPlayerItem:anItem];
-    [_audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
-}
-/*
- - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
- 
- if (object == _audioPlayer && [keyPath isEqualToString:@"status"]) {
- if (_audioPlayer.status == AVPlayerStatusFailed) {
- NSLog(@"AVPlayer Failed");
- } else if (player.status == AVPlayerStatusReadyToPlay) {
- NSLog(@"AVPlayer Ready to Play");
- } else if (player.status == AVPlayerItemStatusUnknown) {
- NSLog(@"AVPlayer Unknown");
- }
- }
- }
- */
 
 -(void)viewWillAppear:(BOOL)animated{
     _descriptionLabel.numberOfLines = 4;
     //  _descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
 }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"HELLO");
 }
 
 
