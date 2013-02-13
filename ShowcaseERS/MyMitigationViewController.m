@@ -8,11 +8,14 @@
 
 #import "MyMitigationViewController.h"
 
-@interface MyMitigationCollectionViewController()
+@interface MyMitigationViewController()
 
 @end
 
-@implementation MyMitigationCollectionViewController
+@implementation MyMitigationViewController
+
+@synthesize myDescriptions = _myDescriptions;
+@synthesize myImages = _myImages;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,16 +26,111 @@
     return self;
 }
 
+/* load the images and description */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    //self.title = @"USDA-ERS";
+    
+    _myImages = [@[@"images-1.jpeg",
+                 @"images-2.jpeg",
+                 @"images-3.jpeg",
+                 @"images-4.jpeg",
+                 @"images.jpeg",
+                 @"co2mitigation.gif"] mutableCopy];
+    
+    NSString *contentOne = @" Overview";
+    NSString *contentTwo = @" Carbon Sequestration";
+    NSString *contentThree = @" Bioenergy";
+    NSString *contentFour = @" Energy Conservation and Efficiency";
+    NSString *contentFive = @" Non Carbon Dioxide Emissions";
+    NSString *contentSix = @" Policy Design";
+    
+    _myDescriptions = [@[contentOne,
+                       contentTwo,
+                       contentThree,
+                       contentFour,
+                       contentFive,
+                       contentSix] mutableCopy];
+}
+#pragma mark -
+#pragma mark UICollectionViewDataSource
+
+-(NSInteger)numberOfSectionsInCollectionView:
+(UICollectionView *)collectionView
+{
+    return 1;
 }
 
-- (void)didReceiveMemoryWarning
+- (void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView
+    numberOfItemsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return _myImages.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                 cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MyCollectionViewCell *aCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    
+    UIImage *image;
+    int row = [indexPath row];
+    
+    image = [UIImage imageNamed:_myImages[row]];
+    
+    // NSLog(@"_myDescriptions[row] = %@", _myDescriptions[row]);
+    
+    aCell.descriptionLabel.text = _myDescriptions[row];
+    //myCell.descriptionTextView.text = _myDescriptions[row];
+    aCell.imageView.image = image;
+    
+    return aCell;
+}
+
+#pragma mark -
+#pragma mark UICollectionViewFlowLayoutDelegate
+/* this works but then the labels don't line up with the images */
+
+//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UIImage *image;
+//    int row = [indexPath row];
+//
+//    image = [UIImage imageNamed:_myImages[row]];
+//
+//    return image.size;
+//}
+
+// test on real device first, image disappears on click
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewFlowLayout *myLayout =
+    [[UICollectionViewFlowLayout alloc]init];
+    
+    myLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self.collectionView setCollectionViewLayout:myLayout animated:YES];
+}
+
+#pragma mark -
+#pragma mark Section header
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    CustomHeaderView *header = nil;
+    
+    if ([kind isEqual:UICollectionElementKindSectionHeader])
+    {
+        header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                    withReuseIdentifier:@"MyHeader"
+                                                           forIndexPath:indexPath];
+        
+        header.sectionLabel.text = @"  How can land managers remove green house gases from the atmosphere";
+    }
+    return header;
 }
 
 @end

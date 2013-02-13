@@ -10,7 +10,7 @@
 #import "CustomHeaderView.h"
 #import "MyCollectionViewCell.h"
 
-@interface MyMitigationCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MyMitigationViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 {
     NSMutableArray *myImages;
